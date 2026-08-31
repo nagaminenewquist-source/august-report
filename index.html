@@ -30,10 +30,18 @@
       .shell { max-width: none; margin: 0; box-shadow: none; }
       .topbar, .footer { display: none; }
       .hero, section { width: 297mm; height: 210mm; min-height: 210mm; max-height: 210mm; overflow: hidden; page-break-after: always; page-break-inside: avoid; }
+      .hero { grid-template-columns: 1.1fr .9fr; }
+      .section-head { display: flex; }
+      .case-gallery { grid-template-columns: 1.2fr 1fr; }
+      .vision-layout { grid-template-columns: 1fr 1.18fr; }
+      .print-layout { grid-template-columns: 1.1fr .9fr; }
+      .video-layout { grid-template-columns: minmax(0, 1.35fr) minmax(270px, .65fr); }
       /* The Canvas section contains two report pages in the web layout. Let print flow
          through the section and start the capability block on its own A4 page. */
       #canvas { height: auto; min-height: 0; max-height: none; overflow: visible; page-break-inside: auto; }
       #canvas .canvas-capability-head { break-before: page; page-break-before: always; }
+      #capabilities { height: auto; min-height: 0; max-height: none; overflow: visible; page-break-inside: auto; }
+      #capabilities .case-card:nth-child(3) { break-before: page; page-break-before: always; }
       .closing { page-break-after: auto; }
       .hero { padding: 26mm 22mm 18mm; }
       section { padding: 20mm 22mm 16mm; }
@@ -61,15 +69,18 @@
       .case-gallery { gap: 10px; margin-top: 12px; }
       .case-card img { height: 130px; }
       .case-card figcaption { padding: 8px 11px; font-size: 10px; }
-      .vision-layout, .print-layout { gap: 18px; }
+      .vision-section, .print-section { padding-top: 16mm; padding-bottom: 12mm; }
+      .vision-layout, .print-layout { gap: 14px; }
       .vision-copy, .print-copy { padding: 22px; }
       .vision-copy h3, .print-copy h3 { font-size: 22px; }
       .vision-copy p, .print-copy p { font-size: 11px; line-height: 1.65; }
       .vision-points, .print-points { margin-top: 15px; gap: 7px; }
       .vision-points div, .print-points div { padding: 10px 12px; font-size: 11px; }
-      .vision-shot:first-child img { min-height: 260px; }
-      .vision-shot img { min-height: 120px; }
-      .print-image img { max-height: 135mm; }
+      .vision-shot:first-child img { min-height: 215px; }
+      .vision-shot img { min-height: 95px; }
+      .print-image img { max-height: 112mm; }
+      .print-copy { padding: 18px; }
+      .print-copy p { font-size: 10.5px; line-height: 1.55; }
       .video-section .video-layout { gap: 20px; }
       .video-frame { max-height: 145mm; }
       .video-copy { padding: 22px; }
