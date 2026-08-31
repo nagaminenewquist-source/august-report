@@ -40,11 +40,10 @@
          through the section and start the capability block on its own A4 page. */
       #canvas { height: auto; min-height: 0; max-height: none; overflow: visible; page-break-inside: auto; }
       #canvas .canvas-capability-head { break-before: page; page-break-before: always; }
-      #capabilities { height: auto; min-height: 0; max-height: none; overflow: visible; page-break-inside: auto; }
-      #capabilities .case-card:nth-child(3) { break-before: page; page-break-before: always; }
+      #capabilities { height: 210mm; min-height: 210mm; max-height: 210mm; overflow: hidden; page-break-inside: avoid; }
       .closing { page-break-after: auto; }
-      .hero { padding: 26mm 22mm 18mm; }
-      section { padding: 20mm 22mm 16mm; }
+      .hero { padding: 22mm; }
+      section { padding: 18mm 22mm; }
       .section-head { margin-bottom: 20px; }
       .section-head h2 { font-size: 30px; }
       .section-head p { font-size: 12px; line-height: 1.55; }
@@ -62,13 +61,16 @@
       .feature h3 { font-size: 15px; }
       .workflow { padding: 17px 20px; }
       .flow { margin-top: 11px; }
-      .capability-map { padding: 20px 25px; }
-      .cloud { margin: 18px auto 4px; gap: 8px 10px; }
+      .capability-map { padding: 16px 22px; }
+      .cloud { margin: 14px auto 2px; gap: 7px 9px; }
       .cloud span { padding: 7px 10px; font-size: 11px; }
       .cloud span:nth-child(3n) { font-size: 14px; }
-      .case-gallery { gap: 10px; margin-top: 12px; }
-      .case-card img { height: 130px; }
+      .case-gallery { gap: 9px; margin-top: 10px; }
+      .case-card img { height: 110px; }
       .case-card figcaption { padding: 8px 11px; font-size: 10px; }
+      #capabilities .section-head h2 { font-size: 27px; white-space: nowrap; }
+      #canvas .canvas-capability-head { padding-top: 18mm; }
+      #closing { display: none; }
       .vision-section, .print-section { padding-top: 16mm; padding-bottom: 12mm; }
       .vision-layout, .print-layout { gap: 14px; }
       .vision-copy, .print-copy { padding: 22px; }
@@ -82,7 +84,7 @@
       .print-copy { padding: 18px; }
       .print-copy p { font-size: 10.5px; line-height: 1.55; }
       .video-section .video-layout { gap: 20px; }
-      .video-frame { max-height: 145mm; }
+      .video-frame { max-height: 160mm; }
       .video-copy { padding: 22px; }
       .video-copy h3 { font-size: 23px; }
       .video-copy p, .video-copy li { font-size: 11px; line-height: 1.6; }
